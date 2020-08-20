@@ -20,3 +20,4 @@
 - React Router
 - Bootstrap
 - Axios
+- React Toastify
