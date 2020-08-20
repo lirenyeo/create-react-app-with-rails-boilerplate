@@ -21,3 +21,18 @@
 - Bootstrap
 - Axios
 - React Toastify
+
+
+## Getting Started
+
+1. `git clone git@github.com:lirenyeo/create-react-app-with-rails-login.git` then `cd create-react-app-with-rails-login`
+2. Set up PostgreSQL: `rails db:create` then `rails db:migrate`
+3. Set up CRA installation: `yarn install` (This will execute `yarn --cwd client install` which does yarn install in client folder)
+4. To see how everything works together, run `yarn build && rails s`
+  - `yarn build` trigger CRA build and copy the static files into rails `/public` folder, so we only need start Rails server for it to serve the react pages
+5. To start development, run `foreman start -f Procfile.dev`
+  - This will start Rails on port 3000 and CRA on port 3001
+  - Use `localhost:3001` to develop in CRA, api calls to `/api/v1/` will be proxied to Rails (port 3000)
+  - Logged out users will get redirected to `localhost:3001/users/sign_in` which doesnt exist on CRA, you will need to manually change the URL to 3000 to login. But this process only needs to happen once when you log out
+6. To add new JS packages, make sure to do `yarn add <package-name>` inside `/client` folder
+
