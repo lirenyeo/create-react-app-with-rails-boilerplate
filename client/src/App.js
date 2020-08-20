@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { Switch, Route } from 'react-router-dom'
+
+import HomePage from './pages/HomePage'
+import PublicPage from './pages/PublicPage'
+import AuthContainer from './containers/AuthContainer'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Switch>
+      <Route exact path="/welcome" component={PublicPage} />
+      <AuthContainer>
+        <Route exact path="/" component={HomePage} />
+      </AuthContainer>
+    </Switch>
+  )
 }
 
-export default App;
+export default App

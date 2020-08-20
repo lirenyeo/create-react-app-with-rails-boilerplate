@@ -1,0 +1,29 @@
+{
+  "name": "create-react-app-with-rails-login",
+  "version": "1.0.0",
+  "description": "## Key Features",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd client && yarn start",
+    "build": "cd client && yarn build",
+    "install": "cd client && yarn"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.2",
+    "react-bootstrap": "^1.3.0",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.1"
+  }
+}
