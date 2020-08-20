@@ -1,2 +1,1 @@
-web: cd client && yarn start
-api: bundle exec rails s -p 3000
+web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
