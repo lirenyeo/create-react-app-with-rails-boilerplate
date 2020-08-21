@@ -34,5 +34,5 @@
   - This will start Rails on port 3000 and CRA on port 3001
   - Use `localhost:3001` to develop in CRA, api calls to `/api/v1/` will be proxied to Rails (port 3000)
   - Logged out users will get redirected to `localhost:3001/users/sign_in` which doesnt exist on CRA, you will need to manually change the URL to 3000 to login. But this process only needs to happen once when you log out
+  - In dev mode, visiting `/admin` will also not work due as Rails AA is served on port 3000. Can add a simple conditional check to fix that, but nonetheless it works fine on production mode.
 6. To add new JS packages, make sure to do `yarn add <package-name>` inside `/client` folder
-

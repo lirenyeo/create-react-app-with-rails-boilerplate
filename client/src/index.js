@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css'
+import GlobalStyle from './style/global'
 
 import App from './App'
 import * as serviceWorker from './serviceWorker'
@@ -12,6 +12,7 @@ import configureStore from './Store'
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyle />
     <Provider store={configureStore()}>
       <BrowserRouter>
         <App />
